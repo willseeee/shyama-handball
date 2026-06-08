@@ -228,6 +228,31 @@ body.loaded #preloader {
     background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
 }
 
+/* Medium desktop screens adjustments to prevent navigation wrapping/overflow */
+@media (min-width: 1280px) and (max-width: 1399px) {
+    .navbar {
+        padding: 0 3%;
+    }
+    .academy-name-text {
+        font-size: 0.82rem;
+        padding: 0 6px;
+    }
+    .nav-links {
+        gap: 2px;
+    }
+    .nav-links li a {
+        padding: 24px 8px;
+        font-size: 0.78rem;
+    }
+    .nav-links li a::after {
+        bottom: 15px;
+    }
+    .nav-links li a:hover::after,
+    .nav-links li a.active::after {
+        width: calc(100% - 16px);
+    }
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-btn {
     display: none;
@@ -902,7 +927,7 @@ footer {
     }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1279px) {
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -1771,7 +1796,7 @@ footer {
     flex-direction: row;
     gap: 50px;
 }
-@media (max-width: 1199px) {
+@media (max-width: 1279px) {
     .responsive-flex {
         flex-direction: column;
         gap: 30px;
@@ -1920,7 +1945,7 @@ footer {
     .footer-container { grid-template-columns: 1fr; }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1279px) {
     .event-row { flex-direction: column; text-align: center; }
     .event-date { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-right: 0; padding-bottom: 15px; margin-bottom: 15px; width: 100%; }
     .event-details { padding: 0; margin-bottom: 15px; }
