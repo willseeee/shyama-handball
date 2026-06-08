@@ -253,6 +253,43 @@ body.loaded #preloader {
     }
 }
 
+/* Style for Join Academy CTA Button */
+.nav-links li.nav-btn-container {
+    margin-left: 10px; /* Space it out from other links */
+}
+
+.nav-links li a.nav-btn {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #d97706 100%); /* Gold gradient */
+    color: var(--primary-color) !important;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: auto; /* Overrides default link height */
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Hover effects for CTA */
+.nav-links li a.nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+    background: linear-gradient(135deg, #fbbf24 0%, var(--accent-color) 100%);
+    color: var(--primary-color) !important;
+}
+
+/* Active/Focus state for CTA */
+.nav-links li a.nav-btn:active {
+    transform: translateY(0);
+}
+
+/* Disable the hover underline animation for the CTA button */
+.nav-links li.nav-btn-container a::after {
+    display: none !important;
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-btn {
     display: none;
@@ -993,6 +1030,20 @@ footer {
     }
     .close-menu {
         display: none !important;
+    }
+    .nav-links li.nav-btn-container {
+        margin-left: 0;
+        padding: 15px 24px;
+        width: 100%;
+    }
+    .nav-links li a.nav-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        box-shadow: 0 4px 10px rgba(245, 158, 11, 0.2);
+    }
+    .nav-links li a.nav-btn:hover {
+        padding-left: 20px; /* Overrides the mobile sliding indentation */
     }
     .hero-content h1 {
         font-size: 1.8rem;
